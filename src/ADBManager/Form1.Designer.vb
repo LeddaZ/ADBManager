@@ -30,6 +30,7 @@ Partial Class Form1
         Me.BtnRootShell = New System.Windows.Forms.Button()
         Me.LblSourceLink = New System.Windows.Forms.Label()
         Me.BtnNetwork = New System.Windows.Forms.Button()
+        Me.BtnDisconnect = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -63,7 +64,7 @@ Partial Class Form1
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(43, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.0"
+        Me.LblVersion.Text = "1.0.1"
         '
         'BtnListDevices
         '
@@ -116,12 +117,23 @@ Partial Class Form1
         Me.BtnNetwork.Text = "Connect over network"
         Me.BtnNetwork.UseVisualStyleBackColor = True
         '
+        'BtnDisconnect
+        '
+        Me.BtnDisconnect.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDisconnect.Location = New System.Drawing.Point(390, 158)
+        Me.BtnDisconnect.Name = "BtnDisconnect"
+        Me.BtnDisconnect.Size = New System.Drawing.Size(96, 49)
+        Me.BtnDisconnect.TabIndex = 8
+        Me.BtnDisconnect.Text = "Disconnect from network"
+        Me.BtnDisconnect.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(498, 318)
+        Me.Controls.Add(Me.BtnDisconnect)
         Me.Controls.Add(Me.BtnNetwork)
         Me.Controls.Add(Me.LblSourceLink)
         Me.Controls.Add(Me.BtnRootShell)
@@ -146,4 +158,5 @@ Partial Class Form1
     Friend WithEvents BtnRootShell As Button
     Friend WithEvents LblSourceLink As Label
     Friend WithEvents BtnNetwork As Button
+    Friend WithEvents BtnDisconnect As Button
 End Class

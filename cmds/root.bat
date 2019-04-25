@@ -1,3 +1,2 @@
 @echo off
-adb\adb.exe root
-adb\adb.exe shell
+adb\adb.exe shell su
