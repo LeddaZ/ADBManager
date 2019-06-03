@@ -18,4 +18,8 @@
     Private Sub BtnDisconnect_Click(sender As Object, e As EventArgs) Handles BtnDisconnect.Click
         Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\disconnect.bat")
     End Sub
+
+    Private Sub BtnCopy_Click(sender As Object, e As EventArgs) Handles BtnCopy.Click
+        Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\copy.bat")
+    End Sub
 End Class

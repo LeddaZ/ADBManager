@@ -31,6 +31,7 @@ Partial Class Form1
         Me.LblSourceLink = New System.Windows.Forms.Label()
         Me.BtnNetwork = New System.Windows.Forms.Button()
         Me.BtnDisconnect = New System.Windows.Forms.Button()
+        Me.BtnCopy = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -64,14 +65,14 @@ Partial Class Form1
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(43, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.1"
+        Me.LblVersion.Text = "1.0.2"
         '
         'BtnListDevices
         '
         Me.BtnListDevices.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnListDevices.Location = New System.Drawing.Point(12, 103)
         Me.BtnListDevices.Name = "BtnListDevices"
-        Me.BtnListDevices.Size = New System.Drawing.Size(96, 49)
+        Me.BtnListDevices.Size = New System.Drawing.Size(105, 55)
         Me.BtnListDevices.TabIndex = 3
         Me.BtnListDevices.Text = "List avaliable devices"
         Me.BtnListDevices.UseVisualStyleBackColor = True
@@ -79,9 +80,9 @@ Partial Class Form1
         'BtnShell
         '
         Me.BtnShell.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnShell.Location = New System.Drawing.Point(140, 103)
+        Me.BtnShell.Location = New System.Drawing.Point(123, 103)
         Me.BtnShell.Name = "BtnShell"
-        Me.BtnShell.Size = New System.Drawing.Size(96, 49)
+        Me.BtnShell.Size = New System.Drawing.Size(105, 55)
         Me.BtnShell.TabIndex = 4
         Me.BtnShell.Text = "Open shell"
         Me.BtnShell.UseVisualStyleBackColor = True
@@ -89,9 +90,9 @@ Partial Class Form1
         'BtnRootShell
         '
         Me.BtnRootShell.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRootShell.Location = New System.Drawing.Point(268, 103)
+        Me.BtnRootShell.Location = New System.Drawing.Point(234, 103)
         Me.BtnRootShell.Name = "BtnRootShell"
-        Me.BtnRootShell.Size = New System.Drawing.Size(95, 49)
+        Me.BtnRootShell.Size = New System.Drawing.Size(105, 55)
         Me.BtnRootShell.TabIndex = 5
         Me.BtnRootShell.Text = "Open root shell"
         Me.BtnRootShell.UseVisualStyleBackColor = True
@@ -110,9 +111,9 @@ Partial Class Form1
         'BtnNetwork
         '
         Me.BtnNetwork.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNetwork.Location = New System.Drawing.Point(390, 103)
+        Me.BtnNetwork.Location = New System.Drawing.Point(345, 103)
         Me.BtnNetwork.Name = "BtnNetwork"
-        Me.BtnNetwork.Size = New System.Drawing.Size(96, 49)
+        Me.BtnNetwork.Size = New System.Drawing.Size(103, 55)
         Me.BtnNetwork.TabIndex = 7
         Me.BtnNetwork.Text = "Connect over network"
         Me.BtnNetwork.UseVisualStyleBackColor = True
@@ -120,12 +121,22 @@ Partial Class Form1
         'BtnDisconnect
         '
         Me.BtnDisconnect.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDisconnect.Location = New System.Drawing.Point(390, 158)
+        Me.BtnDisconnect.Location = New System.Drawing.Point(345, 174)
         Me.BtnDisconnect.Name = "BtnDisconnect"
-        Me.BtnDisconnect.Size = New System.Drawing.Size(96, 49)
+        Me.BtnDisconnect.Size = New System.Drawing.Size(103, 55)
         Me.BtnDisconnect.TabIndex = 8
         Me.BtnDisconnect.Text = "Disconnect from network"
         Me.BtnDisconnect.UseVisualStyleBackColor = True
+        '
+        'BtnCopy
+        '
+        Me.BtnCopy.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCopy.Location = New System.Drawing.Point(15, 174)
+        Me.BtnCopy.Name = "BtnCopy"
+        Me.BtnCopy.Size = New System.Drawing.Size(102, 63)
+        Me.BtnCopy.TabIndex = 9
+        Me.BtnCopy.Text = "Copy file to internal storage"
+        Me.BtnCopy.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -133,6 +144,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(498, 318)
+        Me.Controls.Add(Me.BtnCopy)
         Me.Controls.Add(Me.BtnDisconnect)
         Me.Controls.Add(Me.BtnNetwork)
         Me.Controls.Add(Me.LblSourceLink)
@@ -159,4 +171,5 @@ Partial Class Form1
     Friend WithEvents LblSourceLink As Label
     Friend WithEvents BtnNetwork As Button
     Friend WithEvents BtnDisconnect As Button
+    Friend WithEvents BtnCopy As Button
 End Class
