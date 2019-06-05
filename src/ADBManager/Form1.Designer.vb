@@ -32,6 +32,7 @@ Partial Class Form1
         Me.BtnNetwork = New System.Windows.Forms.Button()
         Me.BtnDisconnect = New System.Windows.Forms.Button()
         Me.BtnCopy = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -61,15 +62,15 @@ Partial Class Form1
         Me.LblVersion.AutoSize = True
         Me.LblVersion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVersion.ForeColor = System.Drawing.Color.White
-        Me.LblVersion.Location = New System.Drawing.Point(446, 9)
+        Me.LblVersion.Location = New System.Drawing.Point(404, 9)
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(43, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.2"
+        Me.LblVersion.Text = "1.0.3"
         '
         'BtnListDevices
         '
-        Me.BtnListDevices.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnListDevices.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnListDevices.Location = New System.Drawing.Point(12, 103)
         Me.BtnListDevices.Name = "BtnListDevices"
         Me.BtnListDevices.Size = New System.Drawing.Size(105, 55)
@@ -79,7 +80,7 @@ Partial Class Form1
         '
         'BtnShell
         '
-        Me.BtnShell.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnShell.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnShell.Location = New System.Drawing.Point(123, 103)
         Me.BtnShell.Name = "BtnShell"
         Me.BtnShell.Size = New System.Drawing.Size(105, 55)
@@ -89,7 +90,7 @@ Partial Class Form1
         '
         'BtnRootShell
         '
-        Me.BtnRootShell.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRootShell.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRootShell.Location = New System.Drawing.Point(234, 103)
         Me.BtnRootShell.Name = "BtnRootShell"
         Me.BtnRootShell.Size = New System.Drawing.Size(105, 55)
@@ -110,7 +111,7 @@ Partial Class Form1
         '
         'BtnNetwork
         '
-        Me.BtnNetwork.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNetwork.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNetwork.Location = New System.Drawing.Point(345, 103)
         Me.BtnNetwork.Name = "BtnNetwork"
         Me.BtnNetwork.Size = New System.Drawing.Size(103, 55)
@@ -120,8 +121,8 @@ Partial Class Form1
         '
         'BtnDisconnect
         '
-        Me.BtnDisconnect.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDisconnect.Location = New System.Drawing.Point(345, 174)
+        Me.BtnDisconnect.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDisconnect.Location = New System.Drawing.Point(345, 164)
         Me.BtnDisconnect.Name = "BtnDisconnect"
         Me.BtnDisconnect.Size = New System.Drawing.Size(103, 55)
         Me.BtnDisconnect.TabIndex = 8
@@ -130,20 +131,31 @@ Partial Class Form1
         '
         'BtnCopy
         '
-        Me.BtnCopy.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCopy.Location = New System.Drawing.Point(15, 174)
+        Me.BtnCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCopy.Location = New System.Drawing.Point(12, 164)
         Me.BtnCopy.Name = "BtnCopy"
-        Me.BtnCopy.Size = New System.Drawing.Size(102, 63)
+        Me.BtnCopy.Size = New System.Drawing.Size(105, 55)
         Me.BtnCopy.TabIndex = 9
         Me.BtnCopy.Text = "Copy file to internal storage"
         Me.BtnCopy.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(123, 164)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 55)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Copy file to Desktop"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(498, 318)
+        Me.ClientSize = New System.Drawing.Size(459, 318)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnCopy)
         Me.Controls.Add(Me.BtnDisconnect)
         Me.Controls.Add(Me.BtnNetwork)
@@ -172,4 +184,5 @@ Partial Class Form1
     Friend WithEvents BtnNetwork As Button
     Friend WithEvents BtnDisconnect As Button
     Friend WithEvents BtnCopy As Button
+    Friend WithEvents Button1 As Button
 End Class
