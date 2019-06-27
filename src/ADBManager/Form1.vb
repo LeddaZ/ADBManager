@@ -23,7 +23,11 @@
         Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\copyfrom.bat")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnCopyTo.Click
         Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\copyto.bat")
+    End Sub
+
+    Private Sub BtnRecord_Click(sender As Object, e As EventArgs) Handles BtnRecord.Click
+        Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\record.bat")
     End Sub
 End Class
