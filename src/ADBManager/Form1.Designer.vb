@@ -35,6 +35,7 @@ Partial Class Form1
         Me.BtnCopyTo = New System.Windows.Forms.Button()
         Me.BtnRecord = New System.Windows.Forms.Button()
         Me.LnkLblSrc = New System.Windows.Forms.LinkLabel()
+        Me.BtnReboot = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -42,18 +43,18 @@ Partial Class Form1
         Me.LblTitle.AutoSize = True
         Me.LblTitle.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTitle.ForeColor = System.Drawing.Color.White
-        Me.LblTitle.Location = New System.Drawing.Point(156, 9)
+        Me.LblTitle.Location = New System.Drawing.Point(146, 9)
         Me.LblTitle.Name = "LblTitle"
-        Me.LblTitle.Size = New System.Drawing.Size(181, 37)
+        Me.LblTitle.Size = New System.Drawing.Size(174, 37)
         Me.LblTitle.TabIndex = 0
-        Me.LblTitle.Text = "ADB Manager"
+        Me.LblTitle.Text = "ADBManager"
         '
         'LblAuthor
         '
         Me.LblAuthor.AutoSize = True
         Me.LblAuthor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAuthor.ForeColor = System.Drawing.Color.White
-        Me.LblAuthor.Location = New System.Drawing.Point(201, 46)
+        Me.LblAuthor.Location = New System.Drawing.Point(192, 46)
         Me.LblAuthor.Name = "LblAuthor"
         Me.LblAuthor.Size = New System.Drawing.Size(82, 21)
         Me.LblAuthor.TabIndex = 1
@@ -64,11 +65,11 @@ Partial Class Form1
         Me.LblVersion.AutoSize = True
         Me.LblVersion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVersion.ForeColor = System.Drawing.Color.White
-        Me.LblVersion.Location = New System.Drawing.Point(404, 9)
+        Me.LblVersion.Location = New System.Drawing.Point(405, 306)
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(43, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.4"
+        Me.LblVersion.Text = "1.0.5"
         '
         'BtnListDevices
         '
@@ -105,7 +106,7 @@ Partial Class Form1
         Me.LblSourceLink.AutoSize = True
         Me.LblSourceLink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSourceLink.ForeColor = System.Drawing.Color.White
-        Me.LblSourceLink.Location = New System.Drawing.Point(12, 243)
+        Me.LblSourceLink.Location = New System.Drawing.Point(9, 310)
         Me.LblSourceLink.Name = "LblSourceLink"
         Me.LblSourceLink.Size = New System.Drawing.Size(88, 17)
         Me.LblSourceLink.TabIndex = 6
@@ -166,7 +167,7 @@ Partial Class Form1
         Me.LnkLblSrc.AutoSize = True
         Me.LnkLblSrc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LnkLblSrc.LinkColor = System.Drawing.Color.Yellow
-        Me.LnkLblSrc.Location = New System.Drawing.Point(90, 244)
+        Me.LnkLblSrc.Location = New System.Drawing.Point(87, 311)
         Me.LnkLblSrc.Name = "LnkLblSrc"
         Me.LnkLblSrc.Size = New System.Drawing.Size(249, 16)
         Me.LnkLblSrc.TabIndex = 13
@@ -174,12 +175,23 @@ Partial Class Form1
         Me.LnkLblSrc.Tag = "https://github.com/LeddaZ/ADBManager"
         Me.LnkLblSrc.Text = "https://github.com/LeddaZ/ADBManager"
         '
+        'BtnReboot
+        '
+        Me.BtnReboot.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReboot.Location = New System.Drawing.Point(12, 225)
+        Me.BtnReboot.Name = "BtnReboot"
+        Me.BtnReboot.Size = New System.Drawing.Size(105, 55)
+        Me.BtnReboot.TabIndex = 14
+        Me.BtnReboot.Text = "Reboot"
+        Me.BtnReboot.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(459, 280)
+        Me.ClientSize = New System.Drawing.Size(459, 336)
+        Me.Controls.Add(Me.BtnReboot)
         Me.Controls.Add(Me.LnkLblSrc)
         Me.Controls.Add(Me.BtnRecord)
         Me.Controls.Add(Me.BtnCopyTo)
@@ -195,7 +207,7 @@ Partial Class Form1
         Me.Controls.Add(Me.LblTitle)
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "Form1"
-        Me.Text = "ADB Manager by LeddaZ"
+        Me.Text = "ADBManager by LeddaZ"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -214,4 +226,5 @@ Partial Class Form1
     Friend WithEvents BtnCopyTo As Button
     Friend WithEvents BtnRecord As Button
     Friend WithEvents LnkLblSrc As LinkLabel
+    Friend WithEvents BtnReboot As Button
 End Class
