@@ -69,7 +69,7 @@ Partial Class Form1
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(43, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.5"
+        Me.LblVersion.Text = "1.0.6"
         '
         'BtnListDevices
         '
@@ -165,11 +165,11 @@ Partial Class Form1
         'LnkLblSrc
         '
         Me.LnkLblSrc.AutoSize = True
-        Me.LnkLblSrc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LnkLblSrc.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LnkLblSrc.LinkColor = System.Drawing.Color.Yellow
         Me.LnkLblSrc.Location = New System.Drawing.Point(87, 311)
         Me.LnkLblSrc.Name = "LnkLblSrc"
-        Me.LnkLblSrc.Size = New System.Drawing.Size(249, 16)
+        Me.LnkLblSrc.Size = New System.Drawing.Size(245, 17)
         Me.LnkLblSrc.TabIndex = 13
         Me.LnkLblSrc.TabStop = True
         Me.LnkLblSrc.Tag = "https://github.com/LeddaZ/ADBManager"
@@ -189,7 +189,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Black
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(459, 336)
         Me.Controls.Add(Me.BtnReboot)
         Me.Controls.Add(Me.LnkLblSrc)

@@ -34,4 +34,8 @@
     Private Sub BtnReboot_Click(sender As Object, e As EventArgs) Handles BtnReboot.Click
         Process.Start("C:\Windows\system32\cmd.exe", "/C cmds\reboot.bat")
     End Sub
+
+    Private Sub LnkLblSrc_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkLblSrc.LinkClicked
+        System.Diagnostics.Process.Start("https://github.com/LeddaZ/ADBManager")
+    End Sub
 End Class
