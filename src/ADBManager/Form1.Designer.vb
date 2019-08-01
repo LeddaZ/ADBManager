@@ -27,7 +27,6 @@ Partial Class Form1
         Me.LblVersion = New System.Windows.Forms.Label()
         Me.BtnListDevices = New System.Windows.Forms.Button()
         Me.BtnShell = New System.Windows.Forms.Button()
-        Me.BtnRootShell = New System.Windows.Forms.Button()
         Me.LblSourceLink = New System.Windows.Forms.Label()
         Me.BtnNetwork = New System.Windows.Forms.Button()
         Me.BtnDisconnect = New System.Windows.Forms.Button()
@@ -65,11 +64,11 @@ Partial Class Form1
         Me.LblVersion.AutoSize = True
         Me.LblVersion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVersion.ForeColor = System.Drawing.Color.White
-        Me.LblVersion.Location = New System.Drawing.Point(405, 306)
+        Me.LblVersion.Location = New System.Drawing.Point(420, 9)
         Me.LblVersion.Name = "LblVersion"
-        Me.LblVersion.Size = New System.Drawing.Size(43, 21)
+        Me.LblVersion.Size = New System.Drawing.Size(27, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "1.0.6"
+        Me.LblVersion.Text = "v8"
         '
         'BtnListDevices
         '
@@ -91,22 +90,12 @@ Partial Class Form1
         Me.BtnShell.Text = "Open shell"
         Me.BtnShell.UseVisualStyleBackColor = True
         '
-        'BtnRootShell
-        '
-        Me.BtnRootShell.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRootShell.Location = New System.Drawing.Point(234, 103)
-        Me.BtnRootShell.Name = "BtnRootShell"
-        Me.BtnRootShell.Size = New System.Drawing.Size(105, 55)
-        Me.BtnRootShell.TabIndex = 5
-        Me.BtnRootShell.Text = "Open root shell"
-        Me.BtnRootShell.UseVisualStyleBackColor = True
-        '
         'LblSourceLink
         '
         Me.LblSourceLink.AutoSize = True
         Me.LblSourceLink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSourceLink.ForeColor = System.Drawing.Color.White
-        Me.LblSourceLink.Location = New System.Drawing.Point(9, 310)
+        Me.LblSourceLink.Location = New System.Drawing.Point(12, 232)
         Me.LblSourceLink.Name = "LblSourceLink"
         Me.LblSourceLink.Size = New System.Drawing.Size(88, 17)
         Me.LblSourceLink.TabIndex = 6
@@ -167,7 +156,7 @@ Partial Class Form1
         Me.LnkLblSrc.AutoSize = True
         Me.LnkLblSrc.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LnkLblSrc.LinkColor = System.Drawing.Color.Yellow
-        Me.LnkLblSrc.Location = New System.Drawing.Point(87, 311)
+        Me.LnkLblSrc.Location = New System.Drawing.Point(94, 232)
         Me.LnkLblSrc.Name = "LnkLblSrc"
         Me.LnkLblSrc.Size = New System.Drawing.Size(245, 17)
         Me.LnkLblSrc.TabIndex = 13
@@ -178,7 +167,7 @@ Partial Class Form1
         'BtnReboot
         '
         Me.BtnReboot.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReboot.Location = New System.Drawing.Point(12, 225)
+        Me.BtnReboot.Location = New System.Drawing.Point(234, 103)
         Me.BtnReboot.Name = "BtnReboot"
         Me.BtnReboot.Size = New System.Drawing.Size(105, 55)
         Me.BtnReboot.TabIndex = 14
@@ -189,8 +178,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(459, 336)
+        Me.BackColor = System.Drawing.Color.Black
+        Me.ClientSize = New System.Drawing.Size(459, 267)
         Me.Controls.Add(Me.BtnReboot)
         Me.Controls.Add(Me.LnkLblSrc)
         Me.Controls.Add(Me.BtnRecord)
@@ -199,7 +188,6 @@ Partial Class Form1
         Me.Controls.Add(Me.BtnDisconnect)
         Me.Controls.Add(Me.BtnNetwork)
         Me.Controls.Add(Me.LblSourceLink)
-        Me.Controls.Add(Me.BtnRootShell)
         Me.Controls.Add(Me.BtnShell)
         Me.Controls.Add(Me.BtnListDevices)
         Me.Controls.Add(Me.LblVersion)
@@ -218,7 +206,6 @@ Partial Class Form1
     Friend WithEvents LblVersion As Label
     Friend WithEvents BtnListDevices As Button
     Friend WithEvents BtnShell As Button
-    Friend WithEvents BtnRootShell As Button
     Friend WithEvents LblSourceLink As Label
     Friend WithEvents BtnNetwork As Button
     Friend WithEvents BtnDisconnect As Button
