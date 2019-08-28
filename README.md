@@ -1,6 +1,7 @@
 # ADBManager
 Windows Forms applications written in Visual Basic to run some basic ADB commands from a GUI.
 
-[Download](https://github.com/LeddaZ/ADBManager/releases)
+# Usage
+If you're running this for the first time, run `setup.bat` inside the zip archive. This will add the adb executable to your PATH so ADBManager can find it.
 
-Please do not edit anything in adb or cmds folder, otherwise the application might not work as intended.
+TODO: add button descriptions
