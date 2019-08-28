@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class Form1
     'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
     'Può essere modificata in Progettazione Windows Form.  
     'Non modificarla mediante l'editor del codice.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.LblAuthor = New System.Windows.Forms.Label()
         Me.LblVersion = New System.Windows.Forms.Label()
@@ -66,9 +67,8 @@ Partial Class Form1
         Me.LblVersion.ForeColor = System.Drawing.Color.White
         Me.LblVersion.Location = New System.Drawing.Point(420, 9)
         Me.LblVersion.Name = "LblVersion"
-        Me.LblVersion.Size = New System.Drawing.Size(27, 21)
+        Me.LblVersion.Size = New System.Drawing.Size(0, 21)
         Me.LblVersion.TabIndex = 2
-        Me.LblVersion.Text = "v8"
         '
         'BtnListDevices
         '
@@ -194,8 +194,9 @@ Partial Class Form1
         Me.Controls.Add(Me.LblAuthor)
         Me.Controls.Add(Me.LblTitle)
         Me.ForeColor = System.Drawing.Color.Black
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "ADBManager by LeddaZ"
+        Me.Text = "ADBManager v9 by LeddaZ"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
