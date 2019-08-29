@@ -78,7 +78,7 @@ Partial Class Form1
         Me.BtnListDevices.Name = "BtnListDevices"
         Me.BtnListDevices.Size = New System.Drawing.Size(105, 55)
         Me.BtnListDevices.TabIndex = 3
-        Me.BtnListDevices.Text = "List avaliable devices"
+        Me.BtnListDevices.Text = "List connected devices"
         Me.BtnListDevices.UseVisualStyleBackColor = True
         '
         'BtnShell
