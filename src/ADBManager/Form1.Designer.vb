@@ -28,14 +28,15 @@ Partial Class Form1
         Me.LblVersion = New System.Windows.Forms.Label()
         Me.BtnListDevices = New System.Windows.Forms.Button()
         Me.BtnShell = New System.Windows.Forms.Button()
-        Me.LblSourceLink = New System.Windows.Forms.Label()
+        Me.LblSource = New System.Windows.Forms.Label()
         Me.BtnNetwork = New System.Windows.Forms.Button()
         Me.BtnDisconnect = New System.Windows.Forms.Button()
         Me.BtnCopy = New System.Windows.Forms.Button()
         Me.BtnCopyTo = New System.Windows.Forms.Button()
         Me.BtnRecord = New System.Windows.Forms.Button()
-        Me.LnkLblSrc = New System.Windows.Forms.LinkLabel()
+        Me.LblLink = New System.Windows.Forms.LinkLabel()
         Me.BtnReboot = New System.Windows.Forms.Button()
+        Me.BtnTheme = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -54,7 +55,7 @@ Partial Class Form1
         Me.LblAuthor.AutoSize = True
         Me.LblAuthor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAuthor.ForeColor = System.Drawing.Color.White
-        Me.LblAuthor.Location = New System.Drawing.Point(192, 46)
+        Me.LblAuthor.Location = New System.Drawing.Point(190, 46)
         Me.LblAuthor.Name = "LblAuthor"
         Me.LblAuthor.Size = New System.Drawing.Size(82, 21)
         Me.LblAuthor.TabIndex = 1
@@ -90,16 +91,16 @@ Partial Class Form1
         Me.BtnShell.Text = "Open shell"
         Me.BtnShell.UseVisualStyleBackColor = True
         '
-        'LblSourceLink
+        'LblSource
         '
-        Me.LblSourceLink.AutoSize = True
-        Me.LblSourceLink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSourceLink.ForeColor = System.Drawing.Color.White
-        Me.LblSourceLink.Location = New System.Drawing.Point(12, 232)
-        Me.LblSourceLink.Name = "LblSourceLink"
-        Me.LblSourceLink.Size = New System.Drawing.Size(88, 17)
-        Me.LblSourceLink.TabIndex = 6
-        Me.LblSourceLink.Text = "Source code: "
+        Me.LblSource.AutoSize = True
+        Me.LblSource.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSource.ForeColor = System.Drawing.Color.White
+        Me.LblSource.Location = New System.Drawing.Point(12, 232)
+        Me.LblSource.Name = "LblSource"
+        Me.LblSource.Size = New System.Drawing.Size(88, 17)
+        Me.LblSource.TabIndex = 6
+        Me.LblSource.Text = "Source code: "
         '
         'BtnNetwork
         '
@@ -128,7 +129,7 @@ Partial Class Form1
         Me.BtnCopy.Name = "BtnCopy"
         Me.BtnCopy.Size = New System.Drawing.Size(105, 55)
         Me.BtnCopy.TabIndex = 9
-        Me.BtnCopy.Text = "Copy file to internal storage"
+        Me.BtnCopy.Text = "Copy file to device"
         Me.BtnCopy.UseVisualStyleBackColor = True
         '
         'BtnCopyTo
@@ -138,7 +139,7 @@ Partial Class Form1
         Me.BtnCopyTo.Name = "BtnCopyTo"
         Me.BtnCopyTo.Size = New System.Drawing.Size(105, 55)
         Me.BtnCopyTo.TabIndex = 10
-        Me.BtnCopyTo.Text = "Copy file to Desktop"
+        Me.BtnCopyTo.Text = "Copy file to PC"
         Me.BtnCopyTo.UseVisualStyleBackColor = True
         '
         'BtnRecord
@@ -151,18 +152,18 @@ Partial Class Form1
         Me.BtnRecord.Text = "Record screen"
         Me.BtnRecord.UseVisualStyleBackColor = True
         '
-        'LnkLblSrc
+        'LblLink
         '
-        Me.LnkLblSrc.AutoSize = True
-        Me.LnkLblSrc.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LnkLblSrc.LinkColor = System.Drawing.Color.Yellow
-        Me.LnkLblSrc.Location = New System.Drawing.Point(94, 232)
-        Me.LnkLblSrc.Name = "LnkLblSrc"
-        Me.LnkLblSrc.Size = New System.Drawing.Size(245, 17)
-        Me.LnkLblSrc.TabIndex = 13
-        Me.LnkLblSrc.TabStop = True
-        Me.LnkLblSrc.Tag = "https://github.com/LeddaZ/ADBManager"
-        Me.LnkLblSrc.Text = "https://github.com/LeddaZ/ADBManager"
+        Me.LblLink.AutoSize = True
+        Me.LblLink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLink.LinkColor = System.Drawing.Color.Yellow
+        Me.LblLink.Location = New System.Drawing.Point(94, 232)
+        Me.LblLink.Name = "LblLink"
+        Me.LblLink.Size = New System.Drawing.Size(245, 17)
+        Me.LblLink.TabIndex = 13
+        Me.LblLink.TabStop = True
+        Me.LblLink.Tag = "https://github.com/LeddaZ/ADBManager"
+        Me.LblLink.Text = "https://github.com/LeddaZ/ADBManager"
         '
         'BtnReboot
         '
@@ -174,20 +175,31 @@ Partial Class Form1
         Me.BtnReboot.Text = "Reboot"
         Me.BtnReboot.UseVisualStyleBackColor = True
         '
+        'BtnTheme
+        '
+        Me.BtnTheme.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTheme.Location = New System.Drawing.Point(345, 232)
+        Me.BtnTheme.Name = "BtnTheme"
+        Me.BtnTheme.Size = New System.Drawing.Size(101, 23)
+        Me.BtnTheme.TabIndex = 15
+        Me.BtnTheme.Text = "Change theme"
+        Me.BtnTheme.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.BtnTheme)
         Me.Controls.Add(Me.BtnReboot)
-        Me.Controls.Add(Me.LnkLblSrc)
+        Me.Controls.Add(Me.LblLink)
         Me.Controls.Add(Me.BtnRecord)
         Me.Controls.Add(Me.BtnCopyTo)
         Me.Controls.Add(Me.BtnCopy)
         Me.Controls.Add(Me.BtnDisconnect)
         Me.Controls.Add(Me.BtnNetwork)
-        Me.Controls.Add(Me.LblSourceLink)
+        Me.Controls.Add(Me.LblSource)
         Me.Controls.Add(Me.BtnShell)
         Me.Controls.Add(Me.BtnListDevices)
         Me.Controls.Add(Me.LblVersion)
@@ -196,7 +208,7 @@ Partial Class Form1
         Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "ADBManager v9 by LeddaZ"
+        Me.Text = "ADBManager v10 by LeddaZ"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,12 +219,13 @@ Partial Class Form1
     Friend WithEvents LblVersion As Label
     Friend WithEvents BtnListDevices As Button
     Friend WithEvents BtnShell As Button
-    Friend WithEvents LblSourceLink As Label
+    Friend WithEvents LblSource As Label
     Friend WithEvents BtnNetwork As Button
     Friend WithEvents BtnDisconnect As Button
     Friend WithEvents BtnCopy As Button
     Friend WithEvents BtnCopyTo As Button
     Friend WithEvents BtnRecord As Button
-    Friend WithEvents LnkLblSrc As LinkLabel
+    Friend WithEvents LblLink As LinkLabel
     Friend WithEvents BtnReboot As Button
+    Friend WithEvents BtnTheme As Button
 End Class
