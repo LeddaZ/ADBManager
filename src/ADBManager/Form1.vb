@@ -97,25 +97,8 @@
         Form2.Visible = True
     End Sub
 
-    Private Sub LblLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLink.LinkClicked
+    Private Sub LnkLblSrc_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkLblSrc.LinkClicked
         System.Diagnostics.Process.Start("https://github.com/LeddaZ/ADBManager")
     End Sub
 
-    Private Sub BtnTheme_Click(sender As Object, e As EventArgs) Handles BtnTheme.Click
-        If Me.BackColor = Color.Black Then
-            Me.BackColor = Color.White
-            Form2.BackColor = Color.White
-            LblTitle.ForeColor = Color.Black
-            LblAuthor.ForeColor = Color.Black
-            LblSource.ForeColor = Color.Black
-            LblLink.LinkColor = Color.Blue
-        ElseIf Me.BackColor = Color.White Then
-            Me.BackColor = Color.Black
-            Form2.BackColor = Color.Black
-            LblTitle.ForeColor = Color.White
-            LblAuthor.ForeColor = Color.White
-            LblSource.ForeColor = Color.White
-            LblLink.LinkColor = Color.Yellow
-        End If
-    End Sub
 End Class
