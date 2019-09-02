@@ -9,7 +9,7 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 ## adb commands
 - List connected devices > `adb devices`
 - Open shell > `adb shell`
-- Reboot > See [Reboot commands](https://github.com/LeddaZ/ADBManager/blob/master/README.md#Reboot_commands)
+- Reboot > See [Reboot commands](https://github.com/LeddaZ/ADBManager/blob/master/README.md#reboot-commands)
 - Connect over network > `adb connect %ip%:5555` (`%ip%` is the IP address of your device; you have to connect your device via USB, run `adb tcpip 5555`, disconnect the device and click on the button)
 - Copy file to device > `adb push -a %source% %dest%` (`%source%` is the source file and `%dest%` is the destination path)
 - Copy file to PC > `adb pull -a %source% %dest%` (same as the above)
