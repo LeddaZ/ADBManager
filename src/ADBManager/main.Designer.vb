@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class main
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Non modificarla mediante l'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(main))
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.LblAuthor = New System.Windows.Forms.Label()
         Me.LblVersion = New System.Windows.Forms.Label()
@@ -37,6 +37,7 @@ Partial Class Form1
         Me.LblLink = New System.Windows.Forms.LinkLabel()
         Me.BtnReboot = New System.Windows.Forms.Button()
         Me.BtnTheme = New System.Windows.Forms.Button()
+        Me.BtnFastbootSwitch = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -182,15 +183,26 @@ Partial Class Form1
         Me.BtnTheme.Name = "BtnTheme"
         Me.BtnTheme.Size = New System.Drawing.Size(101, 23)
         Me.BtnTheme.TabIndex = 15
-        Me.BtnTheme.Text = "Change theme"
+        Me.BtnTheme.Text = "White theme"
         Me.BtnTheme.UseVisualStyleBackColor = True
         '
-        'Form1
+        'BtnFastbootSwitch
+        '
+        Me.BtnFastbootSwitch.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFastbootSwitch.Location = New System.Drawing.Point(12, 12)
+        Me.BtnFastbootSwitch.Name = "BtnFastbootSwitch"
+        Me.BtnFastbootSwitch.Size = New System.Drawing.Size(101, 55)
+        Me.BtnFastbootSwitch.TabIndex = 16
+        Me.BtnFastbootSwitch.Text = "Switch to fastboot commands"
+        Me.BtnFastbootSwitch.UseVisualStyleBackColor = True
+        '
+        'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.BtnFastbootSwitch)
         Me.Controls.Add(Me.BtnTheme)
         Me.Controls.Add(Me.BtnReboot)
         Me.Controls.Add(Me.LblLink)
@@ -207,8 +219,8 @@ Partial Class Form1
         Me.Controls.Add(Me.LblTitle)
         Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
-        Me.Text = "ADBManager v10 by LeddaZ"
+        Me.Name = "main"
+        Me.Text = "ADBManager v11 by LeddaZ - adb commands"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,4 +240,5 @@ Partial Class Form1
     Friend WithEvents LblLink As LinkLabel
     Friend WithEvents BtnReboot As Button
     Friend WithEvents BtnTheme As Button
+    Friend WithEvents BtnFastbootSwitch As Button
 End Class

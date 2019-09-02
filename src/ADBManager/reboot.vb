@@ -1,4 +1,4 @@
-﻿Public Class Form2
+﻿Public Class reboot
     Private Sub BtnNormal_Click(sender As Object, e As EventArgs) Handles BtnNormal.Click
         Me.Visible = False
         Dim adb As New Process

@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class main
 
     Private Sub BtnListDevices_Click(sender As Object, e As EventArgs) Handles BtnListDevices.Click
         Dim adb As New Process
@@ -94,7 +94,7 @@
     End Sub
 
     Private Sub BtnReboot_Click(sender As Object, e As EventArgs) Handles BtnReboot.Click
-        Form2.Visible = True
+        reboot.Visible = True
     End Sub
 
     Private Sub LblLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLink.LinkClicked
@@ -104,18 +104,27 @@
     Private Sub BtnTheme_Click(sender As Object, e As EventArgs) Handles BtnTheme.Click
         If Me.BackColor = Color.Black Then
             Me.BackColor = Color.White
-            Form2.BackColor = Color.White
+            reboot.BackColor = Color.White
+            fastboot.BackColor = Color.White
             LblTitle.ForeColor = Color.Black
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
+            BtnTheme.Text = "Black theme"
         ElseIf Me.BackColor = Color.White Then
             Me.BackColor = Color.Black
-            Form2.BackColor = Color.Black
+            reboot.BackColor = Color.Black
+            fastboot.BackColor = Color.Black
             LblTitle.ForeColor = Color.White
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
+            BtnTheme.Text = "White theme"
         End If
+    End Sub
+
+    Private Sub BtnFastbootSwitch_Click(sender As Object, e As EventArgs) Handles BtnFastbootSwitch.Click
+        Me.Visible = False
+        fastboot.Visible = True
     End Sub
 End Class
