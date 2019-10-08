@@ -110,6 +110,7 @@
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
+            LblVer.ForeColor = Color.Black
             BtnTheme.Text = "Black theme"
         ElseIf Me.BackColor = Color.White Then
             Me.BackColor = Color.Black
@@ -119,6 +120,7 @@
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
+            LblVer.ForeColor = Color.White
             BtnTheme.Text = "White theme"
         End If
     End Sub

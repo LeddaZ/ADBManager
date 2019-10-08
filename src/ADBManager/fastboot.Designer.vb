@@ -31,6 +31,7 @@ Partial Class fastboot
         Me.BtnAdbSwitch = New System.Windows.Forms.Button()
         Me.BtnListFastboot = New System.Windows.Forms.Button()
         Me.BtnBootloader = New System.Windows.Forms.Button()
+        Me.LblVer = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnTheme
@@ -129,12 +130,24 @@ Partial Class fastboot
         Me.BtnBootloader.Text = "Check bootloader status"
         Me.BtnBootloader.UseVisualStyleBackColor = True
         '
+        'LblVer
+        '
+        Me.LblVer.AutoSize = True
+        Me.LblVer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVer.ForeColor = System.Drawing.Color.White
+        Me.LblVer.Location = New System.Drawing.Point(411, 9)
+        Me.LblVer.Name = "LblVer"
+        Me.LblVer.Size = New System.Drawing.Size(36, 21)
+        Me.LblVer.TabIndex = 35
+        Me.LblVer.Text = "v12"
+        '
         'fastboot
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnBootloader)
         Me.Controls.Add(Me.BtnListFastboot)
         Me.Controls.Add(Me.BtnAdbSwitch)
@@ -145,7 +158,7 @@ Partial Class fastboot
         Me.Controls.Add(Me.LblAuthor)
         Me.Controls.Add(Me.LblTitle)
         Me.Name = "fastboot"
-        Me.Text = "ADBManager v11 by LeddaZ - fastboot commands"
+        Me.Text = "ADBManager - fastboot commands"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -159,4 +172,5 @@ Partial Class fastboot
     Friend WithEvents BtnAdbSwitch As Button
     Friend WithEvents BtnListFastboot As Button
     Friend WithEvents BtnBootloader As Button
+    Friend WithEvents LblVer As Label
 End Class

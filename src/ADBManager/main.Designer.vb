@@ -38,6 +38,7 @@ Partial Class main
         Me.BtnReboot = New System.Windows.Forms.Button()
         Me.BtnTheme = New System.Windows.Forms.Button()
         Me.BtnFastbootSwitch = New System.Windows.Forms.Button()
+        Me.LblVer = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -196,12 +197,24 @@ Partial Class main
         Me.BtnFastbootSwitch.Text = "Switch to fastboot commands"
         Me.BtnFastbootSwitch.UseVisualStyleBackColor = True
         '
+        'LblVer
+        '
+        Me.LblVer.AutoSize = True
+        Me.LblVer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVer.ForeColor = System.Drawing.Color.White
+        Me.LblVer.Location = New System.Drawing.Point(410, 12)
+        Me.LblVer.Name = "LblVer"
+        Me.LblVer.Size = New System.Drawing.Size(36, 21)
+        Me.LblVer.TabIndex = 17
+        Me.LblVer.Text = "v12"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnFastbootSwitch)
         Me.Controls.Add(Me.BtnTheme)
         Me.Controls.Add(Me.BtnReboot)
@@ -220,7 +233,7 @@ Partial Class main
         Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "main"
-        Me.Text = "ADBManager v11 by LeddaZ - adb commands"
+        Me.Text = "ADBManager - adb commands"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -241,4 +254,5 @@ Partial Class main
     Friend WithEvents BtnReboot As Button
     Friend WithEvents BtnTheme As Button
     Friend WithEvents BtnFastbootSwitch As Button
+    Friend WithEvents LblVer As Label
 End Class
