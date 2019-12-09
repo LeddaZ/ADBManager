@@ -6,7 +6,7 @@
             .FileName = "cmd.exe",
             .UseShellExecute = True,
             .CreateNoWindow = False,
-            .Arguments = "/c adb reboot"
+            .Arguments = "/c adb reboot && pause"
         }
         adb.StartInfo = adbinfo
         adb.Start()
@@ -19,7 +19,7 @@
             .FileName = "cmd.exe",
             .UseShellExecute = True,
             .CreateNoWindow = False,
-            .Arguments = "/c adb reboot recovery"
+            .Arguments = "/c adb reboot recovery && pause"
         }
         adb.StartInfo = adbinfo
         adb.Start()
@@ -32,7 +32,7 @@
             .FileName = "cmd.exe",
             .UseShellExecute = True,
             .CreateNoWindow = False,
-            .Arguments = "/c adb reboot bootloader"
+            .Arguments = "/c adb reboot bootloader && pause"
         }
         adb.StartInfo = adbinfo
         adb.Start()

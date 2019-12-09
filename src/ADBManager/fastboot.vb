@@ -51,4 +51,16 @@
             BtnTheme.Text = "White theme"
         End If
     End Sub
+
+    Private Sub BtnFReboot_Click(sender As Object, e As EventArgs) Handles BtnFReboot.Click
+        Dim adb As New Process
+        Dim adbinfo As New System.Diagnostics.ProcessStartInfo With {
+            .FileName = "cmd.exe",
+            .UseShellExecute = True,
+            .CreateNoWindow = False,
+            .Arguments = "/c fastboot reboot && pause"
+        }
+        adb.StartInfo = adbinfo
+        adb.Start()
+    End Sub
 End Class

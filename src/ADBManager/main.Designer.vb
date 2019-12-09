@@ -39,6 +39,7 @@ Partial Class main
         Me.BtnTheme = New System.Windows.Forms.Button()
         Me.BtnFastbootSwitch = New System.Windows.Forms.Button()
         Me.LblVer = New System.Windows.Forms.Label()
+        Me.BtnInstall = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -98,7 +99,7 @@ Partial Class main
         Me.LblSource.AutoSize = True
         Me.LblSource.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSource.ForeColor = System.Drawing.Color.White
-        Me.LblSource.Location = New System.Drawing.Point(12, 232)
+        Me.LblSource.Location = New System.Drawing.Point(12, 303)
         Me.LblSource.Name = "LblSource"
         Me.LblSource.Size = New System.Drawing.Size(88, 17)
         Me.LblSource.TabIndex = 6
@@ -159,7 +160,7 @@ Partial Class main
         Me.LblLink.AutoSize = True
         Me.LblLink.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLink.LinkColor = System.Drawing.Color.Yellow
-        Me.LblLink.Location = New System.Drawing.Point(94, 232)
+        Me.LblLink.Location = New System.Drawing.Point(94, 303)
         Me.LblLink.Name = "LblLink"
         Me.LblLink.Size = New System.Drawing.Size(245, 17)
         Me.LblLink.TabIndex = 13
@@ -180,7 +181,7 @@ Partial Class main
         'BtnTheme
         '
         Me.BtnTheme.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTheme.Location = New System.Drawing.Point(345, 232)
+        Me.BtnTheme.Location = New System.Drawing.Point(345, 301)
         Me.BtnTheme.Name = "BtnTheme"
         Me.BtnTheme.Size = New System.Drawing.Size(101, 23)
         Me.BtnTheme.TabIndex = 15
@@ -206,14 +207,25 @@ Partial Class main
         Me.LblVer.Name = "LblVer"
         Me.LblVer.Size = New System.Drawing.Size(36, 21)
         Me.LblVer.TabIndex = 17
-        Me.LblVer.Text = "v12"
+        Me.LblVer.Text = "v13"
+        '
+        'BtnInstall
+        '
+        Me.BtnInstall.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInstall.Location = New System.Drawing.Point(12, 225)
+        Me.BtnInstall.Name = "BtnInstall"
+        Me.BtnInstall.Size = New System.Drawing.Size(105, 55)
+        Me.BtnInstall.TabIndex = 18
+        Me.BtnInstall.Text = "Install APK file"
+        Me.BtnInstall.UseVisualStyleBackColor = True
         '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.ClientSize = New System.Drawing.Size(459, 336)
+        Me.Controls.Add(Me.BtnInstall)
         Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnFastbootSwitch)
         Me.Controls.Add(Me.BtnTheme)
@@ -255,4 +267,5 @@ Partial Class main
     Friend WithEvents BtnTheme As Button
     Friend WithEvents BtnFastbootSwitch As Button
     Friend WithEvents LblVer As Label
+    Friend WithEvents BtnInstall As Button
 End Class

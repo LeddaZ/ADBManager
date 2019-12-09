@@ -32,6 +32,7 @@ Partial Class fastboot
         Me.BtnListFastboot = New System.Windows.Forms.Button()
         Me.BtnBootloader = New System.Windows.Forms.Button()
         Me.LblVer = New System.Windows.Forms.Label()
+        Me.BtnFReboot = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnTheme
@@ -139,7 +140,17 @@ Partial Class fastboot
         Me.LblVer.Name = "LblVer"
         Me.LblVer.Size = New System.Drawing.Size(36, 21)
         Me.LblVer.TabIndex = 35
-        Me.LblVer.Text = "v12"
+        Me.LblVer.Text = "v13"
+        '
+        'BtnFReboot
+        '
+        Me.BtnFReboot.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFReboot.Location = New System.Drawing.Point(233, 104)
+        Me.BtnFReboot.Name = "BtnFReboot"
+        Me.BtnFReboot.Size = New System.Drawing.Size(105, 55)
+        Me.BtnFReboot.TabIndex = 36
+        Me.BtnFReboot.Text = "Reboot"
+        Me.BtnFReboot.UseVisualStyleBackColor = True
         '
         'fastboot
         '
@@ -147,6 +158,7 @@ Partial Class fastboot
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.BtnFReboot)
         Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnBootloader)
         Me.Controls.Add(Me.BtnListFastboot)
@@ -173,4 +185,5 @@ Partial Class fastboot
     Friend WithEvents BtnListFastboot As Button
     Friend WithEvents BtnBootloader As Button
     Friend WithEvents LblVer As Label
+    Friend WithEvents BtnFReboot As Button
 End Class
