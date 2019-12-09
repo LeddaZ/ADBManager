@@ -13,13 +13,13 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 - Connect over network > `adb connect %ip%:5555` (`%ip%` is the IP address of your device; you have to connect your device via USB, run `adb tcpip 5555`, disconnect the device and click on the button)
 - Copy file to device > `adb push -a %source% %dest%` (`%source%` is the source file and `%dest%` is the destination path)
 - Copy file to PC > `adb pull -a %source% %dest%` (same as the above)
-- Record screen > `adb shell screenrecord /sdcard/ADBManager.mp4` (max. 3 minutes due to adb limitations)
+- Record screen > `adb shell screenrecord /sdcard/%name%.mp4` (`%name%` is the filename; max. 3 minutes due to adb limitations)
 - Disconnect from network > `adb disconnect`
 
 ## Reboot commands
 - Normal > `adb reboot`
-- Recovery > `adb reboot recovery
-- Fastboot > `adb reboot fastboot`
+- Recovery > `adb reboot recovery`
+- Fastboot > `adb reboot bootloader`
 
 ## fastboot commands
 - List connected devices > `fastboot devices`
