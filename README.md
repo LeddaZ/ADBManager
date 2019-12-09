@@ -15,7 +15,7 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 - Copy file to PC > `adb pull -a %source% %dest%` (same as the above)
 - Record screen > `adb shell screenrecord /sdcard/%name%.mp4` (`%name%` is the filename; max. 3 minutes due to adb limitations)
 - Disconnect from network > `adb disconnect`
-- Install APK > `adb install %apk%` (%apk% is the APK file path)
+- Install APK file > `adb install %apk%` (`%apk%` is the APK file path)
 
 ## Reboot commands
 - Normal > `adb reboot`
