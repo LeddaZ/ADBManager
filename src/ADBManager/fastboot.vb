@@ -53,14 +53,50 @@
     End Sub
 
     Private Sub BtnFReboot_Click(sender As Object, e As EventArgs) Handles BtnFReboot.Click
-        Dim adb As New Process
-        Dim adbinfo As New System.Diagnostics.ProcessStartInfo With {
+        Dim fastboot As New Process
+        Dim fastbootinfo As New System.Diagnostics.ProcessStartInfo With {
             .FileName = "cmd.exe",
             .UseShellExecute = True,
             .CreateNoWindow = False,
             .Arguments = "/c fastboot reboot && pause"
         }
-        adb.StartInfo = adbinfo
-        adb.Start()
+        fastboot.StartInfo = fastbootinfo
+        fastboot.Start()
+    End Sub
+
+    Private Sub BtnFlashRecovery_Click(sender As Object, e As EventArgs) Handles BtnFlashRecovery.Click
+        Dim img As String
+        img = InputBox("Enter the recovery image path", "Flash a recovery image")
+        If img = Nothing Then
+            MsgBox("You have entered an empty path.", MsgBoxStyle.Critical, "Error")
+        Else
+            Dim fastboot As New Process
+            Dim fastbootinfo As New System.Diagnostics.ProcessStartInfo With {
+                .FileName = "cmd.exe",
+                .UseShellExecute = True,
+                .CreateNoWindow = False,
+                .Arguments = "/c fastboot flash recovery " + img + " && pause"
+            }
+            fastboot.StartInfo = fastbootinfo
+            fastboot.Start()
+        End If
+    End Sub
+
+    Private Sub BtnBootImage_Click(sender As Object, e As EventArgs) Handles BtnBootImage.Click
+        Dim boot As String
+        boot = InputBox("Enter the image path", "Boot an image")
+        If boot = Nothing Then
+            MsgBox("You have entered an empty path.", MsgBoxStyle.Critical, "Error")
+        Else
+            Dim fastboot As New Process
+            Dim fastbootinfo As New System.Diagnostics.ProcessStartInfo With {
+                .FileName = "cmd.exe",
+                .UseShellExecute = True,
+                .CreateNoWindow = False,
+                .Arguments = "/c fastboot boot " + boot + " && pause"
+            }
+            fastboot.StartInfo = fastbootinfo
+            fastboot.Start()
+        End If
     End Sub
 End Class

@@ -100,7 +100,7 @@
 
     Private Sub BtnRecord_Click(sender As Object, e As EventArgs) Handles BtnRecord.Click
         Dim name As String
-        name = InputBox("Enter the filename", "Record screen")
+        name = InputBox("Enter the filename without the extension", "Record screen")
         If name = Nothing Then
             MsgBox("You have entered an empty filename.", MsgBoxStyle.Critical, "Error")
         Else
@@ -164,6 +164,36 @@
                 .UseShellExecute = True,
                 .CreateNoWindow = False,
                 .Arguments = "/c adb install " + apk + " && pause"
+            }
+            adb.StartInfo = adbinfo
+            adb.Start()
+        End If
+    End Sub
+
+    Private Sub BtnKillServer_Click(sender As Object, e As EventArgs) Handles BtnKillServer.Click
+        Dim adb As New Process
+        Dim adbinfo As New System.Diagnostics.ProcessStartInfo With {
+            .FileName = "cmd.exe",
+            .UseShellExecute = True,
+            .CreateNoWindow = False,
+            .Arguments = "/c adb kill-server && pause"
+        }
+        adb.StartInfo = adbinfo
+        adb.Start()
+    End Sub
+
+    Private Sub BtnLogcat_Click(sender As Object, e As EventArgs) Handles BtnLogcat.Click
+        Dim log As String
+        log = InputBox("Enter the logcat filename without the extension. Press Ctrl+C to stop.", "Grab a logcat")
+        If log = Nothing Then
+            MsgBox("You have entered an empty filename.", MsgBoxStyle.Critical, "Error")
+        Else
+            Dim adb As New Process
+            Dim adbinfo As New System.Diagnostics.ProcessStartInfo With {
+                .FileName = "cmd.exe",
+                .UseShellExecute = True,
+                .CreateNoWindow = False,
+                .Arguments = "/c adb logcat > " + log + ".txt"
             }
             adb.StartInfo = adbinfo
             adb.Start()

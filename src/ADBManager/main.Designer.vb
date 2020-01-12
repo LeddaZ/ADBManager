@@ -40,6 +40,8 @@ Partial Class main
         Me.BtnFastbootSwitch = New System.Windows.Forms.Button()
         Me.LblVer = New System.Windows.Forms.Label()
         Me.BtnInstall = New System.Windows.Forms.Button()
+        Me.BtnKillServer = New System.Windows.Forms.Button()
+        Me.BtnLogcat = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -108,9 +110,9 @@ Partial Class main
         'BtnNetwork
         '
         Me.BtnNetwork.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNetwork.Location = New System.Drawing.Point(345, 103)
+        Me.BtnNetwork.Location = New System.Drawing.Point(234, 164)
         Me.BtnNetwork.Name = "BtnNetwork"
-        Me.BtnNetwork.Size = New System.Drawing.Size(103, 55)
+        Me.BtnNetwork.Size = New System.Drawing.Size(105, 55)
         Me.BtnNetwork.TabIndex = 7
         Me.BtnNetwork.Text = "Connect over network"
         Me.BtnNetwork.UseVisualStyleBackColor = True
@@ -120,7 +122,7 @@ Partial Class main
         Me.BtnDisconnect.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDisconnect.Location = New System.Drawing.Point(345, 164)
         Me.BtnDisconnect.Name = "BtnDisconnect"
-        Me.BtnDisconnect.Size = New System.Drawing.Size(103, 55)
+        Me.BtnDisconnect.Size = New System.Drawing.Size(105, 55)
         Me.BtnDisconnect.TabIndex = 8
         Me.BtnDisconnect.Text = "Disconnect from network"
         Me.BtnDisconnect.UseVisualStyleBackColor = True
@@ -148,7 +150,7 @@ Partial Class main
         'BtnRecord
         '
         Me.BtnRecord.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRecord.Location = New System.Drawing.Point(234, 164)
+        Me.BtnRecord.Location = New System.Drawing.Point(345, 103)
         Me.BtnRecord.Name = "BtnRecord"
         Me.BtnRecord.Size = New System.Drawing.Size(105, 55)
         Me.BtnRecord.TabIndex = 12
@@ -207,7 +209,7 @@ Partial Class main
         Me.LblVer.Name = "LblVer"
         Me.LblVer.Size = New System.Drawing.Size(36, 21)
         Me.LblVer.TabIndex = 17
-        Me.LblVer.Text = "v13"
+        Me.LblVer.Text = "v14"
         '
         'BtnInstall
         '
@@ -219,12 +221,34 @@ Partial Class main
         Me.BtnInstall.Text = "Install APK file"
         Me.BtnInstall.UseVisualStyleBackColor = True
         '
+        'BtnKillServer
+        '
+        Me.BtnKillServer.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnKillServer.Location = New System.Drawing.Point(123, 225)
+        Me.BtnKillServer.Name = "BtnKillServer"
+        Me.BtnKillServer.Size = New System.Drawing.Size(105, 55)
+        Me.BtnKillServer.TabIndex = 19
+        Me.BtnKillServer.Text = "Terminate ADB"
+        Me.BtnKillServer.UseVisualStyleBackColor = True
+        '
+        'BtnLogcat
+        '
+        Me.BtnLogcat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogcat.Location = New System.Drawing.Point(234, 225)
+        Me.BtnLogcat.Name = "BtnLogcat"
+        Me.BtnLogcat.Size = New System.Drawing.Size(105, 55)
+        Me.BtnLogcat.TabIndex = 20
+        Me.BtnLogcat.Text = "Grab a logcat"
+        Me.BtnLogcat.UseVisualStyleBackColor = True
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 336)
+        Me.Controls.Add(Me.BtnLogcat)
+        Me.Controls.Add(Me.BtnKillServer)
         Me.Controls.Add(Me.BtnInstall)
         Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnFastbootSwitch)
@@ -268,4 +292,6 @@ Partial Class main
     Friend WithEvents BtnFastbootSwitch As Button
     Friend WithEvents LblVer As Label
     Friend WithEvents BtnInstall As Button
+    Friend WithEvents BtnKillServer As Button
+    Friend WithEvents BtnLogcat As Button
 End Class

@@ -33,6 +33,8 @@ Partial Class fastboot
         Me.BtnBootloader = New System.Windows.Forms.Button()
         Me.LblVer = New System.Windows.Forms.Label()
         Me.BtnFReboot = New System.Windows.Forms.Button()
+        Me.BtnFlashRecovery = New System.Windows.Forms.Button()
+        Me.BtnBootImage = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnTheme
@@ -140,17 +142,37 @@ Partial Class fastboot
         Me.LblVer.Name = "LblVer"
         Me.LblVer.Size = New System.Drawing.Size(36, 21)
         Me.LblVer.TabIndex = 35
-        Me.LblVer.Text = "v13"
+        Me.LblVer.Text = "v14"
         '
         'BtnFReboot
         '
         Me.BtnFReboot.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFReboot.Location = New System.Drawing.Point(233, 104)
+        Me.BtnFReboot.Location = New System.Drawing.Point(11, 165)
         Me.BtnFReboot.Name = "BtnFReboot"
         Me.BtnFReboot.Size = New System.Drawing.Size(105, 55)
         Me.BtnFReboot.TabIndex = 36
         Me.BtnFReboot.Text = "Reboot"
         Me.BtnFReboot.UseVisualStyleBackColor = True
+        '
+        'BtnFlashRecovery
+        '
+        Me.BtnFlashRecovery.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFlashRecovery.Location = New System.Drawing.Point(233, 104)
+        Me.BtnFlashRecovery.Name = "BtnFlashRecovery"
+        Me.BtnFlashRecovery.Size = New System.Drawing.Size(105, 55)
+        Me.BtnFlashRecovery.TabIndex = 37
+        Me.BtnFlashRecovery.Text = "Flash a recovery image"
+        Me.BtnFlashRecovery.UseVisualStyleBackColor = True
+        '
+        'BtnBootImage
+        '
+        Me.BtnBootImage.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBootImage.Location = New System.Drawing.Point(344, 104)
+        Me.BtnBootImage.Name = "BtnBootImage"
+        Me.BtnBootImage.Size = New System.Drawing.Size(105, 55)
+        Me.BtnBootImage.TabIndex = 38
+        Me.BtnBootImage.Text = "Boot an image"
+        Me.BtnBootImage.UseVisualStyleBackColor = True
         '
         'fastboot
         '
@@ -158,6 +180,8 @@ Partial Class fastboot
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
+        Me.Controls.Add(Me.BtnBootImage)
+        Me.Controls.Add(Me.BtnFlashRecovery)
         Me.Controls.Add(Me.BtnFReboot)
         Me.Controls.Add(Me.LblVer)
         Me.Controls.Add(Me.BtnBootloader)
@@ -186,4 +210,6 @@ Partial Class fastboot
     Friend WithEvents BtnBootloader As Button
     Friend WithEvents LblVer As Label
     Friend WithEvents BtnFReboot As Button
+    Friend WithEvents BtnFlashRecovery As Button
+    Friend WithEvents BtnBootImage As Button
 End Class
