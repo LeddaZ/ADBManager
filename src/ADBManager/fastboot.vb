@@ -37,7 +37,7 @@
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
-            LblVer.ForeColor = Color.Black
+            LblVerF.ForeColor = Color.Black
             BtnTheme.Text = "Black theme"
         ElseIf Me.BackColor = Color.White Then
             main.BackColor = Color.Black
@@ -47,7 +47,7 @@
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
-            LblVer.ForeColor = Color.White
+            LblVerF.ForeColor = Color.White
             BtnTheme.Text = "White theme"
         End If
     End Sub
@@ -64,21 +64,27 @@
         fastboot.Start()
     End Sub
 
-    Private Sub BtnFlashRecovery_Click(sender As Object, e As EventArgs) Handles BtnFlashRecovery.Click
+    Private Sub BtnFlash_Click(sender As Object, e As EventArgs) Handles BtnFlash.Click
         Dim img As String
-        img = InputBox("Enter the recovery image path", "Flash a recovery image")
+        Dim part As String
+        img = InputBox("Enter the image path", "Flash an image")
         If img = Nothing Then
             MsgBox("You have entered an empty path.", MsgBoxStyle.Critical, "Error")
         Else
-            Dim fastboot As New Process
-            Dim fastbootinfo As New System.Diagnostics.ProcessStartInfo With {
-                .FileName = "cmd.exe",
-                .UseShellExecute = True,
-                .CreateNoWindow = False,
-                .Arguments = "/c fastboot flash recovery " + img + " && pause"
-            }
-            fastboot.StartInfo = fastbootinfo
-            fastboot.Start()
+            part = InputBox("Enter the destination partition", "Flash an image")
+            If part = Nothing Then
+                MsgBox("You have entered an empty partition.", MsgBoxStyle.Critical, "Error")
+            Else
+                Dim fastboot As New Process
+                Dim fastbootinfo As New System.Diagnostics.ProcessStartInfo With {
+                    .FileName = "cmd.exe",
+                    .UseShellExecute = True,
+                    .CreateNoWindow = False,
+                    .Arguments = "/c fastboot flash " + part + " " + img + " && pause"
+                }
+                fastboot.StartInfo = fastbootinfo
+                fastboot.Start()
+            End If
         End If
     End Sub
 

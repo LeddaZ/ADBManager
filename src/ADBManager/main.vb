@@ -132,7 +132,7 @@
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
-            LblVer.ForeColor = Color.Black
+            LblVerA.ForeColor = Color.Black
             BtnTheme.Text = "Black theme"
         ElseIf Me.BackColor = Color.White Then
             Me.BackColor = Color.Black
@@ -142,7 +142,7 @@
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
-            LblVer.ForeColor = Color.White
+            LblVerA.ForeColor = Color.White
             BtnTheme.Text = "White theme"
         End If
     End Sub
@@ -194,6 +194,24 @@
                 .UseShellExecute = True,
                 .CreateNoWindow = False,
                 .Arguments = "/c adb logcat > " + log + ".txt"
+            }
+            adb.StartInfo = adbinfo
+            adb.Start()
+        End If
+    End Sub
+
+    Private Sub BtnSideload_Click(sender As Object, e As EventArgs) Handles BtnSideload.Click
+        Dim zip As String
+        zip = InputBox("Enter the zip file path", "Sideload a package")
+        If zip = Nothing Then
+            MsgBox("You have entered an empty path.", MsgBoxStyle.Critical, "Error")
+        Else
+            Dim adb As New Process
+            Dim adbinfo As New System.Diagnostics.ProcessStartInfo With {
+                .FileName = "cmd.exe",
+                .UseShellExecute = True,
+                .CreateNoWindow = False,
+                .Arguments = "/c adb sideload " + zip
             }
             adb.StartInfo = adbinfo
             adb.Start()

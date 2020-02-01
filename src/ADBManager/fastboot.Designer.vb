@@ -31,9 +31,9 @@ Partial Class fastboot
         Me.BtnAdbSwitch = New System.Windows.Forms.Button()
         Me.BtnListFastboot = New System.Windows.Forms.Button()
         Me.BtnBootloader = New System.Windows.Forms.Button()
-        Me.LblVer = New System.Windows.Forms.Label()
+        Me.LblVerF = New System.Windows.Forms.Label()
         Me.BtnFReboot = New System.Windows.Forms.Button()
-        Me.BtnFlashRecovery = New System.Windows.Forms.Button()
+        Me.BtnFlash = New System.Windows.Forms.Button()
         Me.BtnBootImage = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -133,16 +133,16 @@ Partial Class fastboot
         Me.BtnBootloader.Text = "Check bootloader status"
         Me.BtnBootloader.UseVisualStyleBackColor = True
         '
-        'LblVer
+        'LblVerF
         '
-        Me.LblVer.AutoSize = True
-        Me.LblVer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVer.ForeColor = System.Drawing.Color.White
-        Me.LblVer.Location = New System.Drawing.Point(411, 9)
-        Me.LblVer.Name = "LblVer"
-        Me.LblVer.Size = New System.Drawing.Size(36, 21)
-        Me.LblVer.TabIndex = 35
-        Me.LblVer.Text = "v14"
+        Me.LblVerF.AutoSize = True
+        Me.LblVerF.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVerF.ForeColor = System.Drawing.Color.White
+        Me.LblVerF.Location = New System.Drawing.Point(411, 9)
+        Me.LblVerF.Name = "LblVerF"
+        Me.LblVerF.Size = New System.Drawing.Size(36, 21)
+        Me.LblVerF.TabIndex = 35
+        Me.LblVerF.Text = "v15"
         '
         'BtnFReboot
         '
@@ -154,15 +154,15 @@ Partial Class fastboot
         Me.BtnFReboot.Text = "Reboot"
         Me.BtnFReboot.UseVisualStyleBackColor = True
         '
-        'BtnFlashRecovery
+        'BtnFlash
         '
-        Me.BtnFlashRecovery.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFlashRecovery.Location = New System.Drawing.Point(233, 104)
-        Me.BtnFlashRecovery.Name = "BtnFlashRecovery"
-        Me.BtnFlashRecovery.Size = New System.Drawing.Size(105, 55)
-        Me.BtnFlashRecovery.TabIndex = 37
-        Me.BtnFlashRecovery.Text = "Flash a recovery image"
-        Me.BtnFlashRecovery.UseVisualStyleBackColor = True
+        Me.BtnFlash.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFlash.Location = New System.Drawing.Point(233, 104)
+        Me.BtnFlash.Name = "BtnFlash"
+        Me.BtnFlash.Size = New System.Drawing.Size(105, 55)
+        Me.BtnFlash.TabIndex = 37
+        Me.BtnFlash.Text = "Flash an image"
+        Me.BtnFlash.UseVisualStyleBackColor = True
         '
         'BtnBootImage
         '
@@ -181,9 +181,9 @@ Partial Class fastboot
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 267)
         Me.Controls.Add(Me.BtnBootImage)
-        Me.Controls.Add(Me.BtnFlashRecovery)
+        Me.Controls.Add(Me.BtnFlash)
         Me.Controls.Add(Me.BtnFReboot)
-        Me.Controls.Add(Me.LblVer)
+        Me.Controls.Add(Me.LblVerF)
         Me.Controls.Add(Me.BtnBootloader)
         Me.Controls.Add(Me.BtnListFastboot)
         Me.Controls.Add(Me.BtnAdbSwitch)
@@ -208,8 +208,8 @@ Partial Class fastboot
     Friend WithEvents BtnAdbSwitch As Button
     Friend WithEvents BtnListFastboot As Button
     Friend WithEvents BtnBootloader As Button
-    Friend WithEvents LblVer As Label
+    Friend WithEvents LblVerF As Label
     Friend WithEvents BtnFReboot As Button
-    Friend WithEvents BtnFlashRecovery As Button
+    Friend WithEvents BtnFlash As Button
     Friend WithEvents BtnBootImage As Button
 End Class

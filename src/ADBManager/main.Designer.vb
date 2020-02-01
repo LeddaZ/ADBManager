@@ -38,10 +38,11 @@ Partial Class main
         Me.BtnReboot = New System.Windows.Forms.Button()
         Me.BtnTheme = New System.Windows.Forms.Button()
         Me.BtnFastbootSwitch = New System.Windows.Forms.Button()
-        Me.LblVer = New System.Windows.Forms.Label()
+        Me.LblVerA = New System.Windows.Forms.Label()
         Me.BtnInstall = New System.Windows.Forms.Button()
         Me.BtnKillServer = New System.Windows.Forms.Button()
         Me.BtnLogcat = New System.Windows.Forms.Button()
+        Me.BtnSideload = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTitle
@@ -200,16 +201,16 @@ Partial Class main
         Me.BtnFastbootSwitch.Text = "Switch to fastboot commands"
         Me.BtnFastbootSwitch.UseVisualStyleBackColor = True
         '
-        'LblVer
+        'LblVerA
         '
-        Me.LblVer.AutoSize = True
-        Me.LblVer.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVer.ForeColor = System.Drawing.Color.White
-        Me.LblVer.Location = New System.Drawing.Point(410, 12)
-        Me.LblVer.Name = "LblVer"
-        Me.LblVer.Size = New System.Drawing.Size(36, 21)
-        Me.LblVer.TabIndex = 17
-        Me.LblVer.Text = "v14"
+        Me.LblVerA.AutoSize = True
+        Me.LblVerA.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVerA.ForeColor = System.Drawing.Color.White
+        Me.LblVerA.Location = New System.Drawing.Point(410, 12)
+        Me.LblVerA.Name = "LblVerA"
+        Me.LblVerA.Size = New System.Drawing.Size(36, 21)
+        Me.LblVerA.TabIndex = 17
+        Me.LblVerA.Text = "v15"
         '
         'BtnInstall
         '
@@ -241,16 +242,27 @@ Partial Class main
         Me.BtnLogcat.Text = "Grab a logcat"
         Me.BtnLogcat.UseVisualStyleBackColor = True
         '
+        'BtnSideload
+        '
+        Me.BtnSideload.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSideload.Location = New System.Drawing.Point(345, 225)
+        Me.BtnSideload.Name = "BtnSideload"
+        Me.BtnSideload.Size = New System.Drawing.Size(105, 55)
+        Me.BtnSideload.TabIndex = 21
+        Me.BtnSideload.Text = "Sideload a package"
+        Me.BtnSideload.UseVisualStyleBackColor = True
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(459, 336)
+        Me.Controls.Add(Me.BtnSideload)
         Me.Controls.Add(Me.BtnLogcat)
         Me.Controls.Add(Me.BtnKillServer)
         Me.Controls.Add(Me.BtnInstall)
-        Me.Controls.Add(Me.LblVer)
+        Me.Controls.Add(Me.LblVerA)
         Me.Controls.Add(Me.BtnFastbootSwitch)
         Me.Controls.Add(Me.BtnTheme)
         Me.Controls.Add(Me.BtnReboot)
@@ -290,8 +302,9 @@ Partial Class main
     Friend WithEvents BtnReboot As Button
     Friend WithEvents BtnTheme As Button
     Friend WithEvents BtnFastbootSwitch As Button
-    Friend WithEvents LblVer As Label
+    Friend WithEvents LblVerA As Label
     Friend WithEvents BtnInstall As Button
     Friend WithEvents BtnKillServer As Button
     Friend WithEvents BtnLogcat As Button
+    Friend WithEvents BtnSideload As Button
 End Class
