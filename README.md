@@ -18,6 +18,7 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 - Install APK file > `adb install %apk%` (`%apk%` is the APK file path)
 - Terminate ADB > `adb kill-server`
 - Grab a logcat > `adb logcat %file%.txt` (`%file%` is the logcat file path)
+- Sideload a package > `adb sideload %zip%` (`%zip%` is the zip file path)
 
 ## Reboot commands
 - Normal > `adb reboot`
@@ -27,6 +28,6 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 ## fastboot commands
 - List connected devices > `fastboot devices`
 - Check bootloader status > `fastboot oem device-info`
-- Flash a recovery image > `fastboot flash recovery %img%` (`%img%` is the recovery image path)
+- Flash an image > `fastboot flash %part% %img%` (`%part` is the partition and `%img%` is the recovery image path)
 - Boot an image > `fastboot boot %boot%` (`%boot%` is the image path)
 - Reboot > `fastboot reboot`
