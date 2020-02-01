@@ -28,6 +28,6 @@ Download the [latest release](https://github.com/LeddaZ/ADBManager/releases/late
 ## fastboot commands
 - List connected devices > `fastboot devices`
 - Check bootloader status > `fastboot oem device-info`
-- Flash an image > `fastboot flash %part% %img%` (`%part` is the partition and `%img%` is the recovery image path)
+- Flash an image > `fastboot flash %part% %img%` (`%part` is the partition and `%img%` is the image path)
 - Boot an image > `fastboot boot %boot%` (`%boot%` is the image path)
 - Reboot > `fastboot reboot`
