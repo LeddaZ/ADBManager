@@ -1,4 +1,4 @@
-﻿Public Class fastboot
+﻿Public Class Fastboot
     Private Sub BtnAdbSwitch_Click(sender As Object, e As EventArgs) Handles BtnAdbSwitch.Click
         Me.Visible = False
         main.Visible = True
@@ -30,25 +30,23 @@
 
     Private Sub BtnTheme_Click(sender As Object, e As EventArgs) Handles BtnTheme.Click
         If Me.BackColor = Color.Black Then
-            main.BackColor = Color.White
-            reboot.BackColor = Color.White
+            Main.BackColor = Color.White
             Me.BackColor = Color.White
             LblTitle.ForeColor = Color.Black
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
+            LblMode.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
-            LblVerF.ForeColor = Color.Black
-            BtnTheme.Text = "Black theme"
+            BtnTheme.Text = "Dark theme"
         ElseIf Me.BackColor = Color.White Then
-            main.BackColor = Color.Black
-            reboot.BackColor = Color.Black
+            Main.BackColor = Color.Black
             Me.BackColor = Color.Black
             LblTitle.ForeColor = Color.White
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
+            LblMode.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
-            LblVerF.ForeColor = Color.White
-            BtnTheme.Text = "White theme"
+            BtnTheme.Text = "Light theme"
         End If
     End Sub
 

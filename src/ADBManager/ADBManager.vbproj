@@ -73,23 +73,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fastboot.Designer.vb">
-      <DependentUpon>fastboot.vb</DependentUpon>
+    <Compile Include="Fastboot.Designer.vb">
+      <DependentUpon>Fastboot.vb</DependentUpon>
     </Compile>
-    <Compile Include="fastboot.vb">
+    <Compile Include="Fastboot.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main.vb">
+    <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main.Designer.vb">
-      <DependentUpon>main.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="reboot.Designer.vb">
-      <DependentUpon>reboot.vb</DependentUpon>
-    </Compile>
-    <Compile Include="reboot.vb">
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -109,14 +103,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="fastboot.resx">
-      <DependentUpon>fastboot.vb</DependentUpon>
+    <EmbeddedResource Include="Fastboot.resx">
+      <DependentUpon>Fastboot.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main.resx">
-      <DependentUpon>main.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reboot.resx">
-      <DependentUpon>reboot.vb</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

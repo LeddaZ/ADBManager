@@ -1,4 +1,4 @@
-﻿Public Class main
+﻿Public Class Main
 
     Private Sub BtnListDevices_Click(sender As Object, e As EventArgs) Handles BtnListDevices.Click
         Dim adb As New Process
@@ -115,10 +115,6 @@
         End If
     End Sub
 
-    Private Sub BtnReboot_Click(sender As Object, e As EventArgs) Handles BtnReboot.Click
-        reboot.Visible = True
-    End Sub
-
     Private Sub LblLink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblLink.LinkClicked
         System.Diagnostics.Process.Start("https://github.com/LeddaZ/ADBManager")
     End Sub
@@ -126,30 +122,30 @@
     Private Sub BtnTheme_Click(sender As Object, e As EventArgs) Handles BtnTheme.Click
         If Me.BackColor = Color.Black Then
             Me.BackColor = Color.White
-            reboot.BackColor = Color.White
-            fastboot.BackColor = Color.White
+            Fastboot.BackColor = Color.White
             LblTitle.ForeColor = Color.Black
             LblAuthor.ForeColor = Color.Black
             LblSource.ForeColor = Color.Black
+            LblReboot.ForeColor = Color.Black
+            LblMode.ForeColor = Color.Black
             LblLink.LinkColor = Color.Blue
-            LblVerA.ForeColor = Color.Black
-            BtnTheme.Text = "Black theme"
+            BtnTheme.Text = "Dark theme"
         ElseIf Me.BackColor = Color.White Then
             Me.BackColor = Color.Black
-            reboot.BackColor = Color.Black
-            fastboot.BackColor = Color.Black
+            Fastboot.BackColor = Color.Black
             LblTitle.ForeColor = Color.White
             LblAuthor.ForeColor = Color.White
             LblSource.ForeColor = Color.White
+            LblReboot.ForeColor = Color.White
+            LblMode.ForeColor = Color.White
             LblLink.LinkColor = Color.Yellow
-            LblVerA.ForeColor = Color.White
-            BtnTheme.Text = "White theme"
+            BtnTheme.Text = "Light theme"
         End If
     End Sub
 
     Private Sub BtnFastbootSwitch_Click(sender As Object, e As EventArgs) Handles BtnFastbootSwitch.Click
         Me.Visible = False
-        fastboot.Visible = True
+        Fastboot.Visible = True
     End Sub
 
     Private Sub BtnInstall_Click(sender As Object, e As EventArgs) Handles BtnInstall.Click
@@ -202,7 +198,7 @@
 
     Private Sub BtnSideload_Click(sender As Object, e As EventArgs) Handles BtnSideload.Click
         Dim zip As String
-        zip = InputBox("Enter the zip file path", "Sideload a package")
+        zip = InputBox("Enter the ZIP file path", "Sideload a ZIP file")
         If zip = Nothing Then
             MsgBox("You have entered an empty path.", MsgBoxStyle.Critical, "Error")
         Else
